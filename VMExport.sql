@@ -8,7 +8,7 @@ SELECT
     MIN(REPLACE(A.AssociatedUserNames, ',', '; ')) AS "[AssignedUsers]",
     MIN(CASE WHEN A.AgentVersion IS NULL OR A.AgentVersion = '' THEN 'Unknown' ELSE A.AgentVersion END) AS "[VDAVersion]",
     MIN(D.Name) AS "[DeliveryGroup]"
-FROM [MonotoringDB명].[MonitorData].[Machine] A
+FROM [MonitoringDB명].[MonitorData].[Machine] A
 LEFT OUTER JOIN 
     [HostingUnitServiceSchema].[HypervisorConnection] B ON A.HypervisorId = B.HypervisorConnectionUid
 LEFT OUTER JOIN 
