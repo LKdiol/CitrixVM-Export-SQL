@@ -1,6 +1,6 @@
 -- 딜리버리 그룹으로 검색
 -- Copyright ⓒ Leedk. All rights reserved.
--- Date 2023-08-03
+-- Date 2023-09-14
 Use [SiteDB명]
 SELECT 
     REPLACE(CONCAT('XDHyp:\Connections\',B.HypervisorConnectionName,REPLACE(C.RootPath, '/', '\'),'\',A.HostedMachineName,'.vm'), '\\','\') AS "[VirtualMachinePath]",
